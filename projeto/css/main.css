@@ -1,0 +1,39 @@
+*{
+    padding:0;
+    margin:0;
+}
+header#cabecalho{
+    padding:0;
+    margin:0;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30%;
+}
+header#cabecalho h1{
+    font-size:70px;
+    font-family: 'Racing Sans One', cursive;
+    color: #cc0000;
+}
+header#cabecalho h2{
+    margin-top: 40px;
+    margin-left: 50px;
+    font-family: 'Racing Sans One', cursive;
+    font-size:30px;
+}
+nav#navegacao{
+    font-family: 'Racing Sans One', cursive;
+    font-size:20px;
+}
+nav#navegacao li:hover a{
+    color:black;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+nav#navegacao .dropdown-menu a:hover{
+    color: #cc0000;
+} 
+.carousel-item{
+    max-height:600px; 
+}

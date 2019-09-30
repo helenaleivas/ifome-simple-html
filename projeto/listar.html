@@ -1,0 +1,45 @@
+  {% extends 'base.html' %}
+
+
+  {% block titulo %} Lista de Departamentos {% endblock %}
+
+  {% block cabeca %}
+
+  {% endblock %}
+
+  {% block corpo %}
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-11">
+          <table class="table table-borderless">
+              <thead>
+                <tr>
+                  <th scope="col">Código</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Atualização</th>
+                  <th scope="col">Endereço</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for lista in departamentos %}
+                    <tr>
+                      <th  scope="row">{{ lista.id }}</th>
+                      <td>{{ lista.nome }}</td>
+                      <td>{{ lista.data_atualizacao }}</td>
+                      <td>
+                        {% for e in enderecos %}
+                          {% if lista.idendereco == e.id %}
+                            {{e.rua}}, {{e.numero}}
+                          {% endif %}
+                        {% endfor %}
+                      </td>
+                      <td><a class="btn btn-info" href="/dept/excluir?idDept={{lista.id}}"> Excluir </a><td>
+                      <td><a class="btn btn-info" href="/dept/alterar?idDept={{lista.id}}"> Alterar </a><td>
+                    </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
